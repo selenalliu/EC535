@@ -1,0 +1,22 @@
+To view the sample output file:
+--------------------------------------------------------------
+
+Dowload the output file. If you copy/paste it, some characters
+in the third column may not be copied correctly.
+Open using gedit or emacs on a Linux machine.
+
+
+Key used in sample output files:
+--------------------------------------------------------------
+qemu
+
+
+In order to have your program output recognizable characters:
+--------------------------------------------------------------
+
+In your Linux Terminal:
+
+Terminal->Set Character Encoding->Add or Remove
+Add "Western IBM850"
+Close
+Terminal->Set Character Encoding->Western (IBM850)

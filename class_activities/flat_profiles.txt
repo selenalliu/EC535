@@ -1,0 +1,18 @@
+OLD Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  us/call  us/call  name
+101.66      0.33     0.33   499500     0.65     0.65  two
+  0.00      0.33     0.00     1000     0.00   325.30  one
+
+----------------------------------------------------------
+NEW Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  Ts/call  Ts/call  name
+  0.00      0.00     0.00     9500     0.00     0.00  two
+  0.00      0.00     0.00     1000     0.00     0.00  one

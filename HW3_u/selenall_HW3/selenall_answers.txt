@@ -1,0 +1,28 @@
+-------------------------------------------------------------------
+Profiling Results
+-------------------------------------------------------------------
+
+qsort_large spends 79.06% of its time executing the function compare based on the flat profile.
+
+
+-------------------------------------------------------------------
+Optimization
+-------------------------------------------------------------------
+
++-----------------------+--------------------+--------------------+
+|Optimizations          |Time on eng-grid    |Time on BeagleBone  |
++-----------------------+--------------------+--------------------+
+|Default                | 0m0.034s           | 0m0.580s           |
++-----------------------+--------------------+--------------------+
+|myOptimization1        | 0m0.028s           | 0m0.450s           |
++-----------------------+--------------------+--------------------+
+|myOptimization2        | 0m0.032s           | 0m0.510s           |
++-----------------------+--------------------+--------------------+
+|Optional 1 & 2 combined| 0m0.027s           | 0m0.450s           |
++-----------------------+--------------------+--------------------+
+
+myOptimization1: Adds 2 macros to replace performance-expensive code: the DISTANCE macro replaces a repeated calculation performed in main(), reducing function call overhead, & COMPARE uses conditional moves to avoid branching for the return statement of compare().
+
+myOptimization2: Uses compiler optimization flag -O3.
+
+Difference btw grid and embedded: Overall much slower when running on BeagleBone across all optimizations, most likely due to differences in hardware capabilities (cache size, clock speed, etc.)

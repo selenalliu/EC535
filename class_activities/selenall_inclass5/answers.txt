@@ -1,0 +1,13 @@
+EC535 In-class Exercise 5
+Selena Liu (selenall@bu.edu)
+
+Command: 
+printf 'AAAAAAAAAAAAAAAA\x16\x06\x40\x00\x00\x00\x00\x00' | ./simpleIO
+
+Explanation:
+This command works by filling the buffer with data and then overwriting the return address of GetInput() with the address of NeverExecutes() instead, which causes the program to execute the latter function.
+
+Steps:
+1) Using gdb (with “x/x $rsp” and “x/x $rbp” commands), I analyzed the stack layout after inputting 16 'A's and found that buffer was located from 0x7fffffffd5e8 through 0x7fffffffd5f4, and the return address (0x00400600) was located right after the buffer at 0x7fffffffd5f8.
+2) I used `disass NeverExecutes` to find the function's address of 0x400616.
+3) Using the information gathered from the previous steps, I constructed an input that filled the buffer with 16 bytes of stuff and overwrote the return address with the address of NeverExecutes() (in little-endian because of x86_64)
