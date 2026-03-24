@@ -1,0 +1,1 @@
+cmd_/ad/eng/users/s/e/selenall/EC535/lab3/km/mytimer.ko := arm-linux-gnueabihf-ld -r  -EL -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /ad/eng/users/s/e/selenall/EC535/lab3/km/mytimer.ko /ad/eng/users/s/e/selenall/EC535/lab3/km/mytimer.o /ad/eng/users/s/e/selenall/EC535/lab3/km/mytimer.mod.o ;  true
