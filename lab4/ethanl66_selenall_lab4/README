@@ -1,0 +1,11 @@
+Names: Ethan Liang, Selena Liu
+BU Emails: ethanl66@bu.edu, selenall@bu.edu
+
+Useful links/resources:
+= Example of using GPIO interrupts in a Linux kernel module + accompanying video: 
+  - https://github.com/Johannes4Linux/Linux_Driver_Tutorial_legacy/blob/main/11_gpio_irq/gpio_irq.c
+  - https://www.youtube.com/watch?v=oCTNuwO9_FA
+= GPIO pins on BeagleBone Black: https://perma.cc/WAZ3-DY5V
+= GPIO interrupts/general example: https://embetronicx.com/tutorials/linux/device-drivers/gpio-linux-device-driver-using-raspberry-pi/
+= Kernel module code from previous labs (2/3)
+= Deriving/implementing a finite-state machine in C (used for traffic light control logic): https://www.controleng.com/finite-state-machine-for-embedded-systems/
